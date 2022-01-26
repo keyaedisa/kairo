@@ -11,8 +11,8 @@
 #tput setaf 8 = light blue
 ##################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	Erik Dubois
-# Website 	: 	http://www.erikdubois.be
+# Author 	: 	keyaedisa
+# Website 	: 	need too make
 ##################################################################################################################
 ##################################################################################################################
 #
@@ -40,7 +40,7 @@
 #https://blog.nillsf.com/index.php/2021/05/27/github-sso-using-password-protected-ssh-keys
 
 project=$(basename `pwd`)
-githubdir="arcolinux"
+githubdir="keyaedisa"
 echo "-----------------------------------------------------------------------------"
 echo "this is project https://github.com/$githubdir/$project"
 echo "-----------------------------------------------------------------------------"
@@ -55,9 +55,7 @@ echo
 echo "Select the correct desktop"
 echo
 echo "0.  Do nothing"
-echo "1.  Erik"
-echo "2.  Raniel"
-echo "3.  Steve"
+echo "1.  key"
 echo "Type the number..."
 
 read CHOICE
@@ -75,32 +73,14 @@ case $CHOICE in
     1 )
 			git config --global pull.rebase false
 			git config --global push.default simple
-			git config --global user.name "arcolinuxz"
-			git config --global user.email "arcolinuxinfo@gmail.com"
+			git config --global user.name "key"
+			git config --global user.email "keyaedisa@gmail.com"
 			sudo git config --system core.editor nano
-			#git config --global credential.helper cache
-			#git config --global credential.helper 'cache --timeout=32000'
-      git remote set-url origin git@github.com-arc:$githubdir/$project
+			git config --global credential.helper cache
+			git config --global credential.helper 'cache --timeout=32000'
+      #git remote set-url origin git@github.com-arc:$githubdir/$project
       echo
       echo "Everything set"
-      ;;
-    2 )
-			git config --global pull.rebase false
-			git config --global push.default simple
-			git config --global user.name "Raniel Laguna"
-			git config --global user.email "avraniel@gmail.com"
-			sudo git config --system core.editor nano
-			git config --global credential.helper cache
-			git config --global credential.helper 'cache --timeout=32000'
-      ;;
-    3 )
-			git config --global pull.rebase false
-			git config --global push.default simple
-			git config --global user.name "Steve Younger"
-			git config --global user.email "coritanie@gmail.com"
-			sudo git config --system core.editor nano
-			git config --global credential.helper cache
-			git config --global credential.helper 'cache --timeout=32000'
       ;;
     * )
       echo "#################################"

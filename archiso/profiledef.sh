@@ -2,10 +2,10 @@
 # shellcheck disable=SC2034
 
 iso_name="kairoAlpha"
-iso_label="kairoAlpha_$(date +%Y%m)"
+iso_label="kairoAlpha"
 iso_publisher="keyaedisa"
 iso_application="kairoAlpha Live/Rescue CD"
-iso_version="$(date +%Y.%m.%d)"
+iso_version="0.0.2_$(date +”%A, %b %d, %Y %H:%M:%S”)"
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')

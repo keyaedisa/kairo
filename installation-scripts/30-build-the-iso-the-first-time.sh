@@ -1,15 +1,8 @@
 #!/bin/bash
 #set -e
 ##################################################################################################################
-# Author	:	Erik Dubois
-# Website	:	https://www.erikdubois.online
-# Website	:	https://www.arcolinux.info
-# Website	:	https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxb.com
-# Website	:	https://www.arcolinuxiso.com
-# Website	:	https://www.arcolinuxforum.com
-# Website	:	https://www.alci.online
+# Author	:	keyaedisa
+# Website	:	https://keyaedisa.github.io
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
@@ -30,19 +23,19 @@ echo
 	#desktop="xfce"
 	#lightdmDesktop="xfce"
 
-	#arcolinuxVersion='v21.03.1'
+	iso_version='0.0.2'
 
-	#isoLabel='arcolinux-next-'$arcolinuxVersion'-x86_64.iso'
+	#isoLabel='arcolinux-next-'$iso_version'-x86_64.iso'
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 60-1"
-	buildFolder=$HOME"/alci-build"
-	outFolder=$HOME"/Alci-Iso-Hardened-Out"
+	buildFolder=$HOME"/kairoAlpha-construction/kairoAlpha-build"
+	outFolder=$HOME"/kairoAlpha-construction/"
 	archisoVersion=$(sudo pacman -Q archiso)
 
 	echo "################################################################## "
 	#echo "Building the desktop                   : "$desktop
-	#echo "Building version                       : "$arcolinuxVersion
+	#echo "Building version                       : "$iso_version
 	#echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "What is the required archiso version?  : "$archisoRequiredVersion
@@ -144,7 +137,7 @@ echo
 	echo "Deleting the build folder if one exists - takes some time"
 	[ -d $buildFolder ] && sudo rm -rf $buildFolder
 	echo
-	echo "Copying the Archiso folder to build work"
+	echo "Copying the Archiso folder to new build folder"
 	echo
 	mkdir $buildFolder
 	cp -r ../archiso $buildFolder/archiso

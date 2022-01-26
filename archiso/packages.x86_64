@@ -1,7 +1,6 @@
 alsa-utils
 amd-ucode
 arch-install-scripts
-archinstall
 b43-fwcutter
 base
 bind-tools
@@ -11,7 +10,6 @@ btrfs-progs
 clonezilla
 cloud-init
 crda
-cryptsetup
 darkhttpd
 ddrescue
 dhclient
@@ -23,7 +21,7 @@ dosfstools
 e2fsprogs
 edk2-shell
 efibootmgr
-espeakup
+#espeakup
 ethtool
 exfatprogs
 f2fs-tools
@@ -33,8 +31,6 @@ gnu-netcat
 gpart
 gpm
 gptfdisk
-grml-zsh-config
-grub
 hdparm
 intel-ucode
 ipw2100-fw
@@ -43,15 +39,14 @@ irssi
 iw
 iwd
 jfsutils
+kinit
 kitty-terminfo
 less
-lftp
 libfido2
 libusb-compat
-#linux
+linux
 linux-atm
 linux-firmware
-livecd-sounds
 lsscsi
 lvm2
 lynx
@@ -76,6 +71,7 @@ nvme-cli
 openconnect
 openssh
 openvpn
+os-prober
 partclone
 parted
 partimage
@@ -83,13 +79,11 @@ pcsclite
 ppp
 pptpclient
 pv
-qemu-guest-agent
 refind
 reflector
 reiserfsprogs
 rp-pppoe
 rsync
-rxvt-unicode-terminfo
 screen
 sdparm
 sg3_utils
@@ -108,8 +102,6 @@ udftools
 usb_modeswitch
 usbmuxd
 usbutils
-vim
-virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
 wireless_tools
@@ -118,6 +110,16 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+
+###archiso-extra
+dialog
+dnsutils
+grub
+grub-tools
+haveged
+logrotate
+ntp
+wget
 
 
 # everything above comes from archiso releng folder
@@ -132,21 +134,21 @@ zsh
 
 #alci-dwm
 #alci-dwm-nemesis
-alci-calamares
+#alci-calamares
 #alci-calamares-dev
 #alci-calamares-config
 #alci-calamares-config-btrfs
 #alci-calamares-config-dev
 #alci-calamares-config-lts
 #alci-calamares-config-pure
-alci-calamares-config-hardened
+#alci-calamares-config-hardened
 xterm
 
 #######################################################
 ###      PACKAGES THAT STAY AFTER INSTALLATION      ###
 #######################################################
 
-sddm
+bash
 bash-completion
 grub
 os-prober
@@ -185,16 +187,35 @@ neofetch
 #xf86-video-amdgpu
 #xf86-video-nouveau
 
-#nvidia
-#nvidia-settings
-#nvidia-utils
+#Nvidia
+nvidia-dkms
+nvidia-settings
+nvidia-utils
 
+#Other video drivers
+xf86-video-ati
+xf86-video-qxl
+xf86-video-vesa
+xf86-video-fbdev
+xf86-video-intel
+xf86-video-vmware
+xf86-video-amdgpu
+xf86-video-nouveau
+xf86-video-openchrome
+mesa
 
+###Input
+xf86-input-void
+xf86-input-evdev
+xf86-input-vmmouse
+xf86-input-libinput
+xf86-input-synaptics
+xf86-input-elographics
 
 ##### lightdm display manager
 
-#lightdm
-#lightdm-gtk-greeter
+lightdm
+lightdm-gtk-greeter
 
 ##### sddm display manager
 
@@ -213,34 +234,23 @@ base-devel
 
 ##### want to have linux-headers
 
-#linux-headers
+linux-headers
 
 
 
 ##### want to have a desktop
 
 #test
-#xfce4
-#xfce4-goodies
+xfce4
+xfce4-goodies
 neofetch
 
 
 
 ##### want to add/use the ArcoLinux repos
 
-#arcolinux-mirrorlist-git
-#arcolinux-keyring
-
-#test
-#arcolinux-wallpapers-git
-
-##### want to add/use the Chaotic repo
-
-#chaotic-mirrorlist
-#chaotic-keyring
-
-#test
-#xcursor-sweet
+arcolinux-mirrorlist-git
+arcolinux-keyring
 
 
 ##### want to add/use your local repo packages
@@ -251,8 +261,7 @@ neofetch
 #Change the name erik to your own username
 #update the database
 
-#test
-#nemesis-wallpapers
+
 
 
 #### want have a btrfs format
@@ -262,8 +271,6 @@ neofetch
 #grub-btrfs
 #timeshift-autosnap
 
-linux-hardened
-linux-hardened-headers
 
 plasma-meta
 dolphin
